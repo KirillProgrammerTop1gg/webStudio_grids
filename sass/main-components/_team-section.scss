@@ -1,0 +1,92 @@
+/* section team */
+.team-section{
+    background-color: $team-section-background-color;
+    @media screen and (min-width: 320px) {
+        padding: 60px 0;
+    }
+    @media screen and (min-width: 1200px){
+        padding: 94px 0;
+    }
+}
+.workers{
+    @include flex(space-between);
+    @media screen and (min-width: 320px) {
+        flex-wrap: wrap;
+        min-width: 100%;
+        max-width: 480px;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+    @media screen and (min-width: 480px) {
+        @include size-of-box(450px, auto);
+    }
+    @media screen and (min-width: 768px) {
+        @include size-of-box(738px, auto);
+    }
+    @media screen and (min-width: 1200px){
+        flex-wrap: nowrap;
+        @include size-of-box(auto, auto);
+        margin-top: 50px;
+    }
+    &__worker{
+        background: $worker-background-color;
+        box-shadow: $worker-boxshadow1, $worker-boxshadow2, $worker-boxshadow3;
+        border-radius: 0px 0px 4px 4px;
+        padding-bottom: 30px;
+        @media screen and (min-width: 320px) {
+            min-width: 100%;
+            max-width: 480px;
+            &:nth-child(n+2){
+                margin-top: 30px;
+            }
+        }
+        @media screen and (min-width: 480px) {
+            @include size-of-box(450px, auto);
+        }
+        @media screen and (min-width: 768px) {
+            @include size-of-box(354px, auto);
+            &:nth-child(n){
+                margin-top: 0;
+            }
+            &:nth-child(n+3){
+                margin-top: 30px;
+            }
+        }
+        @media screen and (min-width: 1200px){
+            &:nth-child(n){
+                margin-top: 0;
+            }
+            @include size-of-box(270px, auto);
+        }
+    }
+    &__name{
+        @include text-style(500, 16px, 1.18, center, 0.03em, $main-color);
+        margin-top: 30px;
+    }
+    &__pos{
+        @include text-style(400, 16px, 1.18, center, 0.03em, $submain-color);
+        margin-top: 10px;
+    }
+    &__socials{
+        @include flex(space-between);
+        @include size-of-box(206px, auto);
+        margin: 16px auto 0;
+    }
+    &__link{
+        @include flex;
+        @include size-of-box(44px, 44px);
+        transition: all cubic-bezier(.11,.2,.55,1.27) 0.2s;
+        &:hover{
+            border-radius: 50%;
+            background: $active-color;
+        }
+        &:hover > svg{
+            fill: $svg-color;
+            transform: rotate(1800deg);
+        }
+    }
+    &__svg{
+        fill: #AFB1B8;
+        transition: all ease 0.2s;
+    }
+}

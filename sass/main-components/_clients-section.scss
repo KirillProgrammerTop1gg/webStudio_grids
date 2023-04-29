@@ -1,0 +1,83 @@
+/* section clients */
+.clients-section{
+    @extend %section-padding;
+    &__list{
+        @include flex(space-between);
+        @media screen and (min-width: 320px) {
+            flex-wrap: wrap;
+            margin: 50px auto 0;
+            min-width: 100%;
+            max-width: 480px;
+        }
+        @media screen and (min-width: 480px) {
+            @include size-of-box(450px, auto);
+        }
+        @media screen and (min-width: 768px) {
+            @include size-of-box(738px, auto);
+        }
+        @media screen and (min-width: 1200px){
+            flex-wrap: nowrap;
+            @include size-of-box(1170px, auto);
+        }
+    }
+    &__svg{
+        fill: $normal-svg-color;
+        transition: all ease-out 0.2s;
+    }
+    &__item{
+        @media screen and (min-width: 320px) {
+            &:nth-child(n+2){
+                margin-top: 30px;
+            }
+            &:hover{
+                transform: skew(0deg, 0deg);
+            }
+            height: 92px;
+            min-width: 100%;
+            max-width: 480px;
+        }
+        @media screen and (min-width: 480px) {
+            @include size-of-box(210px, 92px);
+            &:nth-child(n){
+                margin-top: 0;
+            }
+            &:nth-child(n+3){
+                margin-top: 30px;
+            }
+            &:hover{
+                transform: skew(-15deg, 10deg);
+            }
+        }
+        @media screen and (min-width: 768px) {
+            @include size-of-box(226px, 90px);
+            &:nth-child(n){
+                margin-top: 0;
+            }
+            &:nth-child(n+4){
+                margin-top: 30px;
+            }
+        }
+        @media screen and (min-width: 1200px){
+            &:nth-child(n){
+                margin-top: 0;
+            }
+            @include size-of-box(170px, 90px);
+            &:hover{
+                transform: skew(-25deg, 10deg);
+            }
+        }
+        @include flex;
+        border: $normal-styles-border $clients-section-item-border-color;
+        @extend %normal-border-radius;
+        transition: all ease-in-out 0.2s;
+        &:hover > svg{
+            fill: $active-color;
+            @media screen and (min-width: 320px) {
+                transform: translate(0px, 0px);
+            }
+            @media screen and (min-width: 480px) {
+                transform: translate(30px, 10px);
+            }
+        }
+    }
+}

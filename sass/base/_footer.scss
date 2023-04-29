@@ -1,0 +1,159 @@
+/* footer */
+.footer-page{
+    padding: 60px 0;
+    background-color: $footer-background-color;
+    &__container{
+        margin: 0 auto;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 15px;
+        @include flex;
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: baseline;
+            justify-content: space-between;
+            @include size-of-box(768px, auto);
+            padding: 0 89px;
+        }
+        @media screen and (min-width: 1200px) {
+            padding: 0 15px;
+            flex-wrap: nowrap;
+            @include size-of-box(1200px, auto);
+        }
+    }
+    &__column--2{
+        margin-left: 70px;
+        @media screen and (min-width: 320px) {
+            margin: 60px auto 0;
+        }
+        @media screen and (min-width: 768px) {
+            margin: 0 0 0 auto;
+        }
+        @media screen and (min-width: 1200px) {
+            margin: 0;
+            margin-top: 12px;
+        }
+    }
+    &__column--3{
+        margin: 0 auto;
+        margin-top: 60px;
+        width: 100%;
+        @media screen and (min-width: 1200px) {
+            margin-top: 12px;
+            width: auto;
+            margin: 0;
+        }
+    }
+    &__title{
+        @include text-style(700, 14px, 1.14, auto, 0.03em, $footer-color);
+        text-transform: uppercase;
+        @media screen and (min-width: 320px) {
+            @include flex;
+        }
+        @media screen and (min-width: 1200px) {
+            display: block;
+        }
+    }
+}
+.contact-information{
+    margin-top: 20px;
+    &__item{
+        margin-top: 9px;
+        &:first-child{
+            margin-top: 0px;
+        }
+    }
+    &__adress{
+        @include text-style(400, 14px, 1.71, start, 0.03em, $footer-color);
+        color: $footer-color;
+        @media screen and (min-width: 320px) {
+            @include flex;
+        }
+        @media screen and (min-width: 1200px) {
+            display: block;
+        }
+    }
+    &__contact{
+        @include text-style(400, 14px, 1.71, start, 0.03em, rgba(255, 255, 255, 0.6));
+        justify-content: start;
+        @media screen and (min-width: 320px) {
+            @include flex;
+        }
+        @media screen and (min-width: 1200px) {
+            display: block;
+        }
+    }
+}
+.socials{
+    margin-top: 20px;
+    @include flex(space-between);
+    @include size-of-box(206px, auto);
+    &__item{
+        @include size-of-box(44px, 44px);
+        border-radius: 50%;
+        @include flex;
+        background: $socials-item-background-color;
+        transition: all cubic-bezier(.77,.22,.1,.96) 0.2s;
+        &:hover{
+            background: $active-color;
+            transform: rotate(360deg);
+        }
+    }
+    &__svg{
+        fill: $footer-color;
+        transition: all cubic-bezier(.77,.22,.1,.96) 0.2s;
+    }
+}
+.footer-form{
+    @include flex(space-between);
+    margin-top: 20px;
+    width: 100%;
+    flex-direction: column;
+    @media screen and (min-width: 1200px) {
+        flex-direction: row;
+        @include size-of-box(570px, auto);
+    }
+    &__but{
+        @include flex;
+        @include size-of-box(200px, 50px);
+        @include text-style(700, 16px, 1.88, center, 0.06em, $footer-color);
+        background: $active-color;
+        box-shadow: $footer-button-shadow;
+        border-radius: 5px;
+        border: 0;
+        @media screen and (min-width: 320px) {
+            margin-top: 20px;
+        }
+        @media screen and (min-width: 1200px) {
+            margin-top: 0;
+        }
+    }
+    &__field{
+        @include text-style(400, 16px, 1.25, auto, 0.03em, $footer-link-color);
+        border: $normal-styles-border $footer-link-border;
+        filter: drop-shadow($footer-button-shadow);
+        @extend %normal-border-radius;
+        background-color: transparent;
+        padding: 15px 16px;
+        transition: all ease 0.2s;
+        @media screen and (min-width: 320px) {
+            height: 50px;
+            min-width: 100%;
+            max-width: 480px;
+        }
+        @media screen and (min-width: 480px) {
+            @include size-of-box(450px, 50px);
+        }
+        @media screen and (min-width: 1200px) {
+            @include size-of-box(358px, 50px);
+        }
+        &:hover{
+            border-color: $active-color;
+        }
+    }
+    &__svg{
+        fill: $svg-color;
+        margin-left: 12px;
+    }
+}

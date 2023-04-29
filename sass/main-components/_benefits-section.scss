@@ -1,0 +1,118 @@
+/* section benefits */
+.benefits-section{
+    @media screen and (min-width: 320px) {
+        padding: 60px 0;
+    }
+    @media screen and (min-width: 1200px){
+        padding: 0;
+        padding-top: 94px;
+    }
+    &__list{
+        @media screen and (min-width: 320px) {
+            @include flex(space-between);
+            flex-wrap: wrap;
+            margin: 0 auto;
+            min-width: 100%;
+            max-width: 480px;
+        }
+        @media screen and (min-width: 480px) {
+            @include size-of-box(450px, auto);
+        }
+        @media screen and (min-width: 768px) {
+            @include size-of-box(738px, auto);
+        }
+        @media screen and (min-width: 1200px){
+            flex-wrap: nowrap;
+            @include size-of-box(auto, auto);
+        }
+    }
+    &__item:before{
+        @media screen and (min-width: 320px) {
+            height: 120px;
+            min-width: 100%;
+            max-width: 480px;
+        }
+        @media screen and (min-width: 480px) {
+            @include size-of-box(450px, 120px);
+        }
+        @media screen and (min-width: 768px) {
+            @include size-of-box(354px, 120px);
+        }
+        @media screen and (min-width: 1200px){
+            @include size-of-box(270px, 120px);
+        }
+        content: '';
+        display: block;
+        @extend %normal-border-radius;
+        margin-bottom: 30px;
+        background: $benefits-icons-background-color;
+        background-size: 70px 70px;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    &__item{
+        &:nth-child(1)::before{
+            background-image: url('../imgs/imgDecorative/icon1.png');
+        }
+        &:nth-child(2)::before{
+            background-image: url('../imgs/imgDecorative/icon2.png');
+        }
+        &:nth-child(3)::before{
+            background-image: url('../imgs/imgDecorative/icon3.png');
+        }
+        &:nth-child(4)::before{
+            background-image: url('../imgs/imgDecorative/icon4.png');
+        }
+        @media screen and (min-width: 320px) {
+            &:nth-child(n+2){
+                margin-top: 30px;
+            }
+        }
+        @media screen and (min-width: 768px) {
+            &:nth-child(n){
+                margin-top: 0;
+            }
+            &:nth-child(n+3){
+                margin-top: 37px;
+            }
+        }
+        @media screen and (min-width: 1200px){
+            &:nth-child(n){
+                margin-top: 0;
+            }
+        }
+    }
+    &__title{
+        @include text-style(700, 14px, 1.14, start, 0.03em, $main-color);
+        @media screen and (min-width: 320px) {
+            text-align: center;
+            min-width: 100%;
+            max-width: 480px;
+        }
+        @media screen and (min-width: 480px) {
+            @include size-of-box(450px, auto);
+            text-align: center;
+        }
+        @media screen and (min-width: 768px) {
+            @include size-of-box(270px, auto);
+            text-align: start;
+        }
+        text-transform: uppercase;
+    }
+    &__text{
+        @include text-style(400, 14px, 1.71, auto, 0.03em, $submain-color);
+        @media screen and (min-width: 320px) {
+            min-width: 100%;
+            max-width: 480px;
+            padding-left: 15px;
+        }
+        @media screen and (min-width: 480px) {
+            @include size-of-box(450px, auto);
+            padding-left: 0;
+        }
+        @media screen and (min-width: 768px) {
+            @include size-of-box(270px, auto);
+        }
+        margin-top: 10px;
+    }
+}

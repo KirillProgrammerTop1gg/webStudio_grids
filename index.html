@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://kirillprogrammertop1gg.github.io/normalize/index.min.css">
+    <link rel="stylesheet" href="./styles/main.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <meta name="description" content="Сайт студії, яка разробляє сайти клієнти, команда і т.д.">
+    <title>WebStudio</title>
+</head>
+
+<body>
+    <!-- Шапка сайту -->
+    <header class="header-page">
+        <div class="header-page__container container">
+            <a href="./index.html" class="main-logo">Web<span class="main-logo--black">Studio</span></a>
+            <nav class="header-page__nav">
+                <ul class="pages">
+                    <li class="pages__item">
+                        <a href="./index.html" class="pages__link pages__overlay">Студія</a>
+                    </li>
+                    <li class="pages__item">
+                        <a href="./portfolio.html" class="pages__link">Портфоліо</a>
+                    </li>
+                    <li class="pages__item">
+                        <a href="#" class="pages__link">Контакти</a>
+                    </li>
+                </ul>
+            </nav>
+            <ul class="contacts">
+                <a href="mailto:info@devstudio.com" class="contacts__link">
+                    <svg width="16" height="12" class="contacts__svg">
+                        <use href="./imgs/symboldefts.svg#icon-envelope-hover"></use>
+                    </svg>
+                    info@devstudio.com
+                </a>
+                <a href="tel:+380961111111" class="contacts__link">
+                    <svg width="10" height="16" class="contacts__svg">
+                        <use href="./imgs/symboldefts.svg#icon-smartphone"></use>
+                    </svg>
+                    +38 096 111 11 11
+                </a>
+            </ul>
+            <svg width="40" height="40" class="header-page__svg" data-open-Menu>
+                <use href="./imgs/symboldefts.svg#icon-Menu">
+            </svg>
+        </div>
+    </header>
+    <!-- основний блок -->
+    <main class="main-section">
+        <!-- Перша основна секція -->
+        <section class="hero-section">
+            <h1 class="hero-section__title" data-aos="fade-down" data-aos-duration="1000">еФЕКтивні рішення для вашого бізнесу</h1>
+            <button type="button" class="hero-section__but" data-open-modal data-aos="fade-up" data-aos-duration="1000">Замовити послугу</button>
+        </section>
+        <!-- Секція "Чому ми?" -->
+        <section class="benefits-section">
+            <div class="container">
+                <ul class="benefits-section__list">
+                    <li class="benefits-section__item" data-aos="fade-up" data-aos-duration="1000">
+                        <h3 class="benefits-section__title">УВАГА ДО ДЕТАЛЕЙ</h3>
+                        <p class="benefits-section__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Voluptatem
+                            veritatis exercitationem
+                            velit magnam iure.</p>
+                    </li>
+                    <li class="benefits-section__item" data-aos="flip-down" data-aos-duration="1000">
+                        <h3 class="benefits-section__title">ПунктуальнІсть</h3>
+                        <p class="benefits-section__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Voluptatem
+                            veritatis exercitationem
+                            velit magnam iure.
+                        </p>
+                    </li>
+                    <li class="benefits-section__item" data-aos="flip-down" data-aos-duration="1000">
+                        <h3 class="benefits-section__title">ПЛАНУВАННЯ</h3>
+                        <p class="benefits-section__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Voluptatem
+                            veritatis exercitationem
+                            velit magnam iure.
+                        </p>
+                    </li>
+                    <li class="benefits-section__item" data-aos="fade-up" data-aos-duration="1000">
+                        <h3 class="benefits-section__title">СУЧАСНІ ТЕхнології</h3>
+                        <p class="benefits-section__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Voluptatem
+                            veritatis exercitationem
+                            velit magnam iure.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Секція "Чим ми займаємося?" -->
+        <section class="services-section">
+            <div class="container">
+                <h2 class="section-title" data-aos="zoom-in" data-aos-duration="1000">Чим ми займаємося</h2>
+                <ul class="services-section__list">
+                    <li class="services-section__item" data-aos="flip-left" data-aos-duration="1000">
+                        <img srcset="./imgs/imgWyWe/optimized/code-desktop@1x.webp 1x, ./imgs/imgWyWe/optimized/code-desktop@2x.webp 2x" src="./imgs/imgWyWe/service1.jpg" alt="картинка з людиною яка пише код" width="370" class="services-section__img">
+                    </li>
+                    <li class="services-section__item" data-aos="flip-up" data-aos-duration="1000">
+                        <img srcset="./imgs/imgWyWe/optimized/test-desktop@1x.webp 1x, ./imgs/imgWyWe/optimized/test-desktop@2x.webp 2x" src="./imgs/imgWyWe/service2.jpg" alt="картинка з людиною перевіряє адаптивність на телефонаї" width="370" class="services-section__img">
+                    </li>
+                    <li class="services-section__item" data-aos="flip-right" data-aos-duration="1000">
+                        <img srcset="./imgs/imgWyWe/optimized/paint-desktop@1x.webp 1x, ./imgs/imgWyWe/optimized/paint-desktop@2x.webp 2x" src="./imgs/imgWyWe/service3.jpg" alt="картинка з людиною яка вибарає колір" width="370" class="services-section__img">
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Секція "Наша команда" -->
+        <section class="team-section" data-aos="fade-down" data-aos-duration="1000">
+            <div class="container">
+                <h2 class="section-title" data-aos="zoom-in-up" data-aos-duration="1000">Наша команда</h2>
+                <ul class="workers">
+                    <li class="workers__worker" data-aos="flip-left" data-aos-duration="1000">
+                        <picture class="workers__photo">
+                            <source srcset="./imgs/imgWork/optimized/worker1-desktop@1x.webp 1x, ./imgs/imgWork/optimized/worker1-desktop@2x.webp 2x"
+                                media="(min-width: 1200px)">
+                            <source srcset="./imgs/imgWork/optimized/worker1-tablet@1x.webp 1x, ./imgs/imgWork/optimized/worker1-tablet@2x.webp 2x"
+                                media="(min-width: 768px)">
+                            <img srcset="./imgs/imgWork/optimized/worker1-mobile@1x.webp 1x, ./imgs/imgWork/optimized/worker1-mobile@2x.webp 2x"
+                                src="./imgs/imgWork/photo1.jpg" alt="фото працівника 1">
+                        </picture>
+                        <h3 class="workers__name">Ігор Дем’яненко</h3>
+                        <h4 class="workers__pos">Product Designer</h4>
+                        <ul class="workers__socials">
+                            <li class="workers__item">
+                                <a href="./" class="workers__link" aria-label="посилання на інсту">
+                                    <svg width="20" height="20" class="workers__svg">
+                                        <use href="./imgs/symboldefts.svg#icon-instagram-2">
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="workers__item">
+                                <a href="./" class="workers__link" aria-label="посилання на твіттер">
+                                    <svg width="20" height="20" class="workers__svg">
+                                        <use href="./imgs/symboldefts.svg#icon-twitter-1">
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="workers__item">
+                                <a href="./" class="workers__link" aria-label="посилання на фейсбук">
+                                    <svg width="20" height="20" class="workers__svg">
+                                        <use href="./imgs/symboldefts.svg#icon-facebook-1">
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="workers__item">
+                                <a href="./" class="workers__link" aria-label="посилання на лінкедін">
+                                    <svg width="20" height="20" class="workers__svg">
+                                        <use href="./imgs/symboldefts.svg#icon-linkedin-1">
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="workers__worker" data-aos="flip-down" data-aos-duration="1000">
+                        <picture class="workers__photo">
+                            <source srcset="./imgs/imgWork/optimized/worker2-desktop@1x.webp 1x, ./imgs/imgWork/optimized/worker2-desktop@2x.webp 2x"
+                                media="(min-width: 1200px)">
+                            <source srcset="./imgs/imgWork/optimized/worker2-tablet@1x.webp 1x, ./imgs/imgWork/optimized/worker2-tablet@2x.webp 2x"
+                                media="(min-width: 768px)">
+                            <img srcset="./imgs/imgWork/optimized/worker2-mobile@1x.webp 1x, ./imgs/imgWork/optimized/worker2-mobile@2x.webp 2x"
+                                src="./imgs/imgWork/photo2.jpg" alt="фото працівника 2">
+                        </picture>
+                        <h3 class="workers__name">Ольга Репіна</h3>
+                        <h4 class="workers__pos">Frontend Developer</h4>
+                        <ul class="workers__socials">
+                            <li class="workers__item">
+                                <a href="./" class="workers__link" aria-label="посилання на інсту">
+                                    <svg width="20" height="20" class="workers__svg">
+                                        <use href="./imgs/symboldefts.svg#icon-instagram-2">
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="workers__item">
+                                <a href="./" class="workers__link" aria-label="посилання на твіттер">
+                                    <svg width="20" height="20" class="workers__svg">
+                                        <use href="./imgs/symboldefts.svg#icon-twitter-1">
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="workers__item">
+                                <a href="./" class="workers__link" aria-label="посилання на фейсбук">
+                                    <svg width="20" height="20" class="workers__svg">
+                                        <use href="./imgs/symboldefts.svg#icon-facebook-1">
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="workers__item">
+                                <a href="./" class="workers__link" aria-label="посилання на лінкедін">
+                                    <svg width="20" height="20" class="workers__svg">
+                                        <use href="./imgs/symboldefts.svg#icon-linkedin-1">
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="workers__worker" data-aos="flip-up" data-aos-duration="1000">
+                        <picture class="workers__photo">
+                            <source srcset="./imgs/imgWork/optimized/worker3-desktop@1x.webp 1x, ./imgs/imgWork/optimized/worker3-desktop@2x.webp 2x"
+                                media="(min-width: 1200px)">
+                            <source srcset="./imgs/imgWork/optimized/worker3-tablet@1x.webp 1x, ./imgs/imgWork/optimized/worker3-tablet@2x.webp 2x"
+                                media="(min-width: 768px)">
+                            <img srcset="./imgs/imgWork/optimized/worker3-mobile@1x.webp 1x, ./imgs/imgWork/optimized/worker3-mobile@2x.webp 2x"
+                                src="./imgs/imgWork/photo3.jpg" alt="фото працівника 3">
+                        </picture>
+                        <h3 class="workers__name">Микола Тарасов</h3>
+                        <h4 class="workers__pos">Marketing</h4>
+                        <ul class="workers__socials">
+                            <li class="workers__item">
+                                <a href="./" class="workers__link" aria-label="посилання на інсту">
+                                    <svg width="20" height="20" class="workers__svg">
+                                        <use href="./imgs/symboldefts.svg#icon-instagram-2">
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="workers__item">
+                                <a href="./" class="workers__link" aria-label="посилання на твіттер">
+                                    <svg width="20" height="20" class="workers__svg">
+                                        <use href="./imgs/symboldefts.svg#icon-twitter-1">
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="workers__item">
+                                <a href="./" class="workers__link">
+                                    <svg width="20" height="20" class="workers__svg" aria-label="посилання на фейсбук">
+                                        <use href="./imgs/symboldefts.svg#icon-facebook-1">
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="workers__item">
+                                <a href="./" class="workers__link">
+                                    <svg width="20" height="20" class="workers__svg" aria-label="посилання на лінкедін">
+                                        <use href="./imgs/symboldefts.svg#icon-linkedin-1">
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="workers__worker" data-aos="flip-right" data-aos-duration="1000">
+                        <picture class="workers__photo">
+                            <source srcset="./imgs/imgWork/optimized/worker4-desktop@1x.webp 1x, ./imgs/imgWork/optimized/worker4-desktop@2x.webp 2x"
+                                media="(min-width: 1200px)">
+                            <source srcset="./imgs/imgWork/optimized/worker4-tablet@1x.webp 1x, ./imgs/imgWork/optimized/worker4-tablet@2x.webp 2x"
+                                media="(min-width: 768px)">
+                            <img srcset="./imgs/imgWork/optimized/worker4-mobile@1x.webp 1x, ./imgs/imgWork/optimized/worker4-mobile@2x.webp 2x"
+                                src="./imgs/imgWork/photo4.jpg" alt="фото працівника 4">
+                        </picture>
+                        <h3 class="workers__name">Михайло Єрмаков</h3>
+                        <h4 class="workers__pos">UI Designer</h4>
+                        <ul class="workers__socials">
+                            <li class="workers__item">
+                                <a href="./" class="workers__link" aria-label="посилання на інсту">
+                                    <svg width="20" height="20" class="workers__svg">
+                                        <use href="./imgs/symboldefts.svg#icon-instagram-2">
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="workers__item">
+                                <a href="./" class="workers__link" aria-label="посилання на твіттер">
+                                    <svg width="20" height="20" class="workers__svg">
+                                        <use href="./imgs/symboldefts.svg#icon-twitter-1">
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="workers__item">
+                                <a href="./" class="workers__link" aria-label="посилання на фейсбук">
+                                    <svg width="20" height="20" class="workers__svg">
+                                        <use href="./imgs/symboldefts.svg#icon-facebook-1">
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="workers__item">
+                                <a href="./" class="workers__link" aria-label="посилання на лінкедін">
+                                    <svg width="20" height="20" class="workers__svg">
+                                        <use href="./imgs/symboldefts.svg#icon-linkedin-1">
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Секція "Постійні клієнти" -->
+        <section class="clients-section">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">Постійні клієнти</h2>
+                <ul class="clients-section__list">
+                    <li class="clients-section__item" data-aos="flip-down" data-aos-duration="700">
+                        <svg class="clients-section__svg" width="44.27" height="49.23">
+                            <use href="./imgs/symboldefts.svg#icon-logo-1"></use>
+                        </svg>
+                    </li>
+                    <li class="clients-section__item" data-aos="flip-up" data-aos-duration="700">
+                        <svg class="clients-section__svg" width="40" height="52">
+                            <use href="./imgs/symboldefts.svg#icon-logo-2"></use>
+                        </svg>
+                    </li>
+                    <li class="clients-section__item" data-aos="flip-down" data-aos-duration="700">
+                        <svg class="clients-section__svg" width="41" height="42.6">
+                            <use href="./imgs/symboldefts.svg#icon-logo-3"></use>
+                        </svg>
+                    </li>
+                    <li class="clients-section__item" data-aos="flip-up" data-aos-duration="700">
+                        <svg class="clients-section__svg" width="79.66" height="42.02">
+                            <use href="./imgs/symboldefts.svg#icon-logo-4"></use>
+                        </svg>
+                    </li>
+                    <li class="clients-section__item" data-aos="flip-down" data-aos-duration="700">
+                        <svg class="clients-section__svg" width="59" height="47">
+                            <use href="./imgs/symboldefts.svg#icon-logo-5"></use>
+                        </svg>
+                    </li>
+                    <li class="clients-section__item" data-aos="flip-up" data-aos-duration="700">
+                        <svg class="clients-section__svg" width="88.48" height="45.44">
+                            <use href="./imgs/symboldefts.svg#icon-logo-6"></use>
+                        </svg>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Секція "форма" -->
+        <div class="overlay is-hidden" data-backdrop>
+            <form class="form-section is-hidden">
+                <h2 class="form-section__title">Залиште свої дані, ми Вам зателефонуємо</h2>
+                <button class="form-section__close" type="button" data-close-modal aria-label="Закрити форму">
+                    <svg class="form-section__icon" width="11" height="11">
+                        <use href="./imgs/symboldefts.svg#icon-Vector"></use>
+                    </svg>
+                </button>
+                <ul class="form-section__list">
+                    <li class="form-section__item">
+                        <label for="name" class="form-section__subtitle">Ім’я</label>
+                        <input type="text" class="form-section__field" required id="name">
+                        <svg class="form-section__svg" width="12" height="12">
+                            <use href="./imgs/symboldefts.svg#icon-person-black-18dp-1"></use>
+                        </svg>
+                    </li>
+                    <li class="form-section__item">
+                        <label for="tel" class="form-section__subtitle">Телефон</label>
+                        <input type="tel" class="form-section__field" required id="tel">
+                        <svg class="form-section__svg" width="13" height="13">
+                            <use href="./imgs/symboldefts.svg#icon-phone-black-18dp-1"></use>
+                        </svg>
+                    </li>
+                    <li class="form-section__item">
+                        <label for="mail" class="form-section__subtitle">Пошта</label>
+                        <input type="email" class="form-section__field" required id="mail">
+                        <svg class="form-section__svg" width="15" height="12">
+                            <use href="./imgs/symboldefts.svg#icon-email-black-18dp-1"></use>
+                        </svg>
+                    </li>
+                    <li class="form-section__item">
+                        <h3 class="form-section__subtitle">Коментарі</h3>
+                        <textarea type="text" class="form-section__textarea" placeholder="Введите текст"></textarea>
+                    </li>
+                    <li class="form-section__item">
+                        <label for="comment" class="form-section__subtitle"></label>
+                        <input type="checkbox" class="form-section__checkbox" id="comment" required>
+                        <p class="form-section__text">Погоджуюсь з розсилкою і приймаю <a class="form-section__link"
+                                href="./"> Умови договору </a></p>
+                    </li>
+                </ul>
+                <button class="form-section__send" type="submit">Надіслати</button>
+            </form>
+        </div>
+        <!-- Секція "меню" -->
+        <div class="header-menu is-hidden" data-backdropMenu>
+            <button class="header-menu__close" type="button" data-close-Menu data-close-modal aria-label="Закрити меню">
+                <svg class="header-menu__icon" width="40" height="40">
+                    <use href="./imgs/symboldefts.svg#icon-Close"></use>
+                </svg>
+            </button>
+            <div class="header-menu__lists">
+                <ul class="header-menu__links">
+                    <li class="header-menu__item">
+                        <a href="./index.html" class="header-menu__link header-menu__overlay">Студія</a>
+                    </li>
+                    <li class="header-menu__item">
+                        <a href="./portfolio.html" class="header-menu__link">Портфоліо</a>
+                    </li>
+                    <li class="header-menu__item">
+                        <a href="#" class="header-menu__link">Контакти</a>
+                    </li>
+                </ul>
+                <div class="header-menu__container">
+                    <ul class="header-menu__contacts">
+                        <a href="tel:+380961111111" class="header-menu__contact">
+                            +38 096 111 11 11
+                        </a>
+                        <a href="mailto:info@devstudio.com" class="header-menu__contact">
+                            info@devstudio.com
+                        </a>
+                    </ul>
+                    <p class="header-menu__text">
+                        <a href="https://instagram.com" class="header-menu__soc">
+                            Instagram
+                        </a>
+                        |
+                        <a href="https://twitter.com" class="header-menu__soc">
+                            Twitter
+                        </a>
+                        |
+                        <a href="https://facebook.com" class="header-menu__soc">
+                            Facebook
+                        </a>
+                        |
+                        <a href="https://linkedin.com" class="header-menu__soc">
+                            LinkedIn
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Підвал сайту -->
+    <footer class="footer-page">
+        <div class="footer-page__container">
+            <div class="footer-page__column--1">
+                <a href="./index.html" class="main-logo">Web<span class="main-logo--white">Studio</span></a>
+                <ul class="contact-information">
+                    <li class="contact-information__item">
+                        <address class="contact-information__adress">м. Київ, пр-т Лесі Українки, 26</address>
+                    </li>
+                    <li class="contact-information__item">
+                        <a href="mailto:info@example.com"
+                            class="pages__link contacts__link contact-information__contact">info@example.com</a>
+                    </li>
+                    <li class="contact-information__item">
+                        <a href="tel:+380961111111" class="pages__link contacts__link contact-information__contact">+38
+                            096 111 11 11</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-page__column--2">
+                <h2 class="footer-page__title">Приєднуйтесь</h2>
+                <ul class="socials">
+                    <li class="socials__item">
+                        <a href="./" class="socials__link" aria-label="посилання на інсту">
+                            <svg width="20" height="20" class="socials__svg">
+                                <use href="./imgs/symboldefts.svg#icon-instagram-2">
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="socials__item">
+                        <a href="./" class="socials__link" aria-label="посилання на твіттер">
+                            <svg width="20" height="20" class="socials__svg">
+                                <use href="./imgs/symboldefts.svg#icon-twitter-1">
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="socials__item">
+                        <a href="./" class="socials__link" aria-label="посилання на фейсбук">
+                            <svg width="20" height="20" class="socials__svg">
+                                <use href="./imgs/symboldefts.svg#icon-facebook-1">
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="socials__item">
+                        <a href="./" class="socials__link" aria-label="посилання на лінкедін">
+                            <svg width="20" height="20" class="socials__svg">
+                                <use href="./imgs/symboldefts.svg#icon-linkedin-1">
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-page__column--3">
+                <h2 class="footer-page__title">ПІДПИШІТЬСЯ НА РОЗСИЛКУ</h2>
+                <form class="footer-form">
+                    <input type="email" class="footer-form__field" placeholder="E-mail" required>
+                    <button class="footer-form__but">
+                        Підписатись
+                        <svg class="footer-form__svg" width="24" height="24">
+                            <use href="./imgs/symboldefts.svg#icon-icon-send"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        const refs = {
+            openModalBtn: document.querySelector("[data-open-modal]"),
+            closeModalBtn: document.querySelector("[data-close-modal]"),
+            backdrop: document.querySelector("[data-backdrop]"),
+        };
+
+        refs.openModalBtn.addEventListener("click", toggleModal);
+        refs.closeModalBtn.addEventListener("click", toggleModal);
+
+        refs.backdrop.addEventListener("click", logBackdropClick);
+
+        function toggleModal() {
+            refs.backdrop.classList.toggle("is-hidden");
+
+            if (document.body.style.overflow == 'hidden') {
+                document.body.style.overflow = 'visible';
+            }
+            else {
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function logBackdropClick() {
+            console.log("Це клік в бекдроп");
+        }
+
+        const refsMenu = {
+            openMenuBtn: document.querySelector("[data-open-Menu]"),
+            closeMenuBtn: document.querySelector("[data-close-Menu]"),
+            backdrop: document.querySelector("[data-backdropMenu]"),
+        };
+
+        refsMenu.openMenuBtn.addEventListener("click", toggleMenu);
+        refsMenu.closeMenuBtn.addEventListener("click", toggleMenu);
+
+        function toggleMenu() {
+            refsMenu.backdrop.classList.toggle("is-hidden");
+
+            if (document.body.style.overflow == 'hidden') {
+                document.body.style.overflow = 'visible';
+            }
+            else {
+                document.body.style.overflow = 'hidden';
+            }
+        }
+    </script>
+</body>
+</html>

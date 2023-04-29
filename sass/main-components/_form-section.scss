@@ -1,0 +1,147 @@
+/* form section */
+.form-section{
+    padding: 40px;
+    
+    @media screen and (min-width: 480px) {
+        @include size-of-box(450px, 609px);
+    }
+    @media screen and (min-width: 1200px){
+        @include size-of-box(528px, 581px);
+    }
+    position: relative;
+    background: $form-background-color;
+    box-shadow: $worker-boxshadow1, $worker-boxshadow2, $worker-boxshadow3;
+    @extend %normal-border-radius;
+    &__title{
+        @include text-style(700, 20px, 1.15, center, 0.03em, $main-color);
+    }
+    &__close{
+        position: absolute;
+        @include flex;
+        top: 8px;
+        right: 8px;
+        @include size-of-box(30px, 30px);
+        background: $svg-color;
+        border: $normal-styles-border $form-close-border;
+        border-radius: 50%;
+        transition: all cubic-bezier(.11,.2,.55,1.27) 0.2s;
+    }
+    &__close:hover>&__icon{
+        fill: $active-color;
+        transition: all ease 0.2s;
+    }
+    &__item{
+        margin-top: 10px;
+        position: relative;
+        &:first-child{
+            margin-top: 12px;
+        }
+        &:last-child{
+            @include text-style(400, 12px, 1.71, center, 0.03em, $submain-color);
+            @include flex(center);
+            align-items: flex-start;
+            @media screen and (min-width: 480px){
+                align-items: center;
+            }
+            @media screen and (min-width: 1170px){
+                font-size: 14px;
+            }
+            margin-top: 20px;
+        }
+    }
+    &__subtitle{
+        @include text-style(400, 12px, 1.17, auto, 0.01em, $submain-color);
+    }
+    &__field, &__textarea{
+        border: $normal-styles-border $form-field-border;
+        @extend %normal-border-radius;
+        cursor: pointer;
+        margin-top: 4px;
+        transition: all ease 0.2s;
+    }
+    &__field:hover+&__svg, &__field:focus+&__svg{
+        fill: $active-color;
+        transform: rotate(360deg) scale(1.5);
+        transition: all ease-in-out 0.3s;
+    }
+    &__field:hover, &__textarea:hover{
+        border-color: $active-color;
+    }
+    &__field{
+        padding: 12px 18px 12px 42px;
+        @media screen and (min-width: 320px) {
+            height: 40px;
+            min-width: 100%;
+            max-width: 480px;
+        }
+        @media screen and (min-width: 480px) {
+            @include size-of-box(370px, 40px);
+        }
+        @media screen and (min-width: 1170px){
+            @include size-of-box(450px, 40px);
+        }
+        display: block;
+    }
+    &__svg{
+        position: absolute;
+        bottom: 14px;
+        left: 15px;
+    }
+    &__textarea{
+        @include text-style(400, 14px, 16px, auto, 0.01em, $form-textarea-color);
+        padding: 12px 16px;
+        @media screen and (min-width: 320px) {
+            height: 120px;
+            min-width: 100%;
+            max-width: 480px;
+        }
+        @media screen and (min-width: 480px) {
+            @include size-of-box(370px, 120px);
+        }
+        @media screen and (min-width: 1200px){
+            @include size-of-box(450px, 120px);
+        }
+    }
+    &__checkbox{
+        @include size-of-box(16px, 15px);
+    }
+    &__text{
+        margin-left: 8.38px;
+    }
+    &__link:link, &__link:visited{
+        color: $active-color;
+        text-decoration: underline $active-color;
+    }
+    &__send{
+        width: 200px;
+        height: 50px;
+        background: $active-color;
+        box-shadow: $form-boxshadow;
+        @extend %normal-border-radius;
+        border: 0;
+        display: block;
+        margin: 30px auto 0;
+        font-family: 'Roboto';
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.18;
+        letter-spacing: 0.06em;
+        color: $form-color;
+    }
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    @include size-of-box(100%, 100%);
+    background: $overlay-background;
+    z-index: 2;
+    transition: all cubic-bezier(.11,.2,.55,1.27) 0.4s;
+    padding: 0 15px;
+    @include flex;
+}
+.overlay.is-hidden{
+    opacity: 0;
+    pointer-events: none;
+    transition: all cubic-bezier(.11,.2,.55,1.27) 0.4s;
+}

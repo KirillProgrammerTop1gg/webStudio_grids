@@ -1,0 +1,134 @@
+/* portfolio section */
+.portfolio-section{
+    border: 1px solid $portfolio-border;
+    padding: 60px 0;
+    @media screen and (min-width:1200px){
+        padding: 94px 0;
+    }
+}
+.filter{
+    @include flex(start);
+    @include size-of-box(290px, auto);
+    @media screen and (min-width: 480px){
+        @include size-of-box(330px, auto);
+    }
+    flex-wrap: wrap;
+    gap: 15px 8px;
+    @media screen and (min-width: 768px) {
+        @include size-of-box(575px, auto);
+        margin: 0 auto;
+        gap: 0 8px;
+    }
+    @media screen and (min-width: 1200px){
+        @include size-of-box(611px, auto);
+    }
+    &__but{
+        @include text-style(500, 16px, 1.61, center, 0.03em, $main-color, 'Roboto');
+        background: $button-filter-background-color;
+        border: 0;
+        border-radius: 4px;
+        transition: all cubic-bezier(.77,.22,.1,.96) 0.2s;
+        padding: 6px 15px;
+        @media screen and (min-width: 480px) {
+            padding: 6px 22px;
+        }
+        &:hover{
+            color: $portfolio-color;
+            background: $active-color;
+            box-shadow: $filter-button-active;
+            transform: translateY(-10px);
+        }
+    }
+
+}
+.projects{
+    @include flex(space-between);
+    flex-wrap: wrap;
+    min-width: 100%;
+    max-width: 480px;
+    margin: 50px auto 0;
+    @media screen and (min-width: 480px) {
+        @include size-of-box(450px, auto);
+    }
+    @media screen and (min-width: 768px) {
+        @include size-of-box(738px, auto);
+    }
+    @media screen and (min-width: 1200px){
+        @include size-of-box(auto, auto);
+    }
+    &__item{
+        border: $normal-styles-border $project-border;
+        padding-bottom: 20px;
+        margin-top: 0;
+        position: relative;
+        transition: all ease-out 0.2s;
+        @media screen and (min-width: 320px) {
+            &:nth-child(n+2){
+                margin-top: 30px;
+            }
+        }
+        @media screen and (min-width: 768px) {
+            &:nth-child(n){
+                margin-top: 0;
+            }
+            &:nth-child(n+3){
+                margin-top: 30px;
+            }
+        }
+        @media screen and (min-width: 1200px){
+            &:nth-child(n){
+                margin-top: 0;
+            }
+            &:nth-child(n+4){
+                margin-top: 30px;
+            }
+        }
+        &:hover>.projects__overlay{
+            opacity: 1;
+            transform: translateY(0px) scale(1) rotate(0deg);
+        }
+        &:hover{
+            box-shadow: $project_boxshadow;
+            @media screen and (min-width: 320px) {
+                transform: scale(1);
+            }
+            @media screen and (min-width: 1200px){
+                transform: scale(1.1);
+            }
+        }
+    }
+    &__texts{
+        margin-top: 20px;
+        padding: 0 24px;
+    }
+    &__name{
+        @include text-style(700, 18px, 2, auto, 0.06em, $main-color, 'Roboto');
+    }
+    &__category{
+        @include text-style(400, 16px, 1.88, auto, 0.03em, $submain-color, 'Roboto');
+        margin-top: 4px;
+    }
+    &__overlay{
+        position: absolute;
+        background: $project-overlay-background-color;
+        @media screen and (min-width: 320px) {
+            min-width: 100%;
+            max-width: 480px;
+        }
+        @media screen and (min-width: 480px) {
+            @include size-of-box(450px, 294px);
+        }
+        @media screen and (min-width: 768px) {
+            @include size-of-box(354px, 294px);
+        }
+        @media screen and (min-width: 1200px){
+            @include size-of-box(370px, 294px);
+            transform: translateY(50px) scale(1.1) rotate(10deg);
+        }
+        @include text-style(400, 18px, 1.56, auto, 0.03em, $portfolio-color, 'Roboto');
+        top: 0;
+        padding: 63px 24px;
+        opacity: 0;
+        transition: all cubic-bezier(.11,.2,.55,1.27) 0.3s;
+    }
+}

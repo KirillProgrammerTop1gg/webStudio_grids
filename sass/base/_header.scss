@@ -1,0 +1,109 @@
+/* header */
+.header-page{
+    position: sticky;
+    background-color: $header-bg;
+    width: 100%;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    &__container{
+        @include flex(space-between);
+        height: inherit;
+        flex-direction: row;
+        @include size-of-box(auto, 60px);
+        padding: 0 15px;
+        @media screen and (min-width: 768px) {
+            height: 80px;
+        }
+        max-width: 1200px;
+    }
+    &__nav{
+        @include flex;
+        height: inherit;
+        display: none;
+        @media screen and (min-width: 768px) {
+            display: block;
+        }
+    }
+    &__svg{
+        @media screen and (min-width: 768px){
+            display: none;
+        }
+    }
+}
+.pages{
+    display: none;
+    gap: 50px;
+    @media screen and (min-width: 768px) {
+        margin-left: 87.8px;
+        @include flex(space-between);
+    }
+    @media screen and (min-width: 1200px){
+        margin-left: 93px;
+    }
+    height: inherit;
+    &__link{
+        @include text-style(500, 14px, 1.17, auto, 0.02em, $main-color);
+        @include flex;
+        transition: all cubic-bezier(.77,.22,.1,.96) 0.2s;
+        position: relative;
+        height: 100%;
+        &:hover{
+            color: $active-color;
+        }
+    }
+    &__overlay::after{
+        content: '';
+        display: block;
+        @include size-of-box(100%, auto);
+        height: 3px;
+        position: absolute;
+        transform: translateY(39px);
+        background-color: $active-color;
+        border-radius: 5px;
+        transition: all ease-in 0.2s;
+    }
+}
+.contacts{
+    display: none;
+    @media screen and (min-width: 768px) {
+        @include size-of-box(136.44px, auto);
+        @include flex(space-between);
+        flex-wrap: wrap;
+    }
+    @media screen and (min-width: 1200px){
+        @include size-of-box(333px, auto);
+    }
+    margin-left: auto;
+    &__link{
+        @include text-style(500, 14px, 1.17, auto, 0.02em, $submain-color);
+        @media screen and (min-width: 768px) {
+            font-size: 11.5px;
+            margin-top: 12px;
+            &:first-child{
+                margin-top: 0;
+            }
+        }
+        @media screen and (min-width: 1200px){
+            font-size: 14px;
+            margin-top: 0;
+        }
+        @include flex;
+        transition: all cubic-bezier(.77,.22,.1,.96) 0.2s;
+        position: relative;
+        @include size-of-box(auto, 100%);
+        &:hover{
+            color: $active-color;
+            transform: translateY(-5px) skew(-10deg);
+        }
+        &:hover>svg{
+            fill: $active-color;
+            transform: rotate(360deg);
+        }
+    }
+    &__svg{
+        fill: $submain-color;
+        margin-right: 10px;
+        transition: all ease-out 0.2s;
+    }
+}

@@ -1,0 +1,30 @@
+body{
+    font-family: 'Roboto';
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 0 15px;
+    @media screen and (min-width: 480px){
+        max-width: 450px;
+        padding: 0;
+    }
+    @media screen and (min-width: 768px){
+        max-width: 738px;
+    }
+    @media screen and (min-width: 1200px){
+        max-width: 1170px;
+    }
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+}
+
+.section-title{
+    @include text-style(700, 36px, 1.16, center, 0.03em, $main-color);
+}
