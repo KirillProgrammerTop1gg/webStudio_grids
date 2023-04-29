@@ -2,7 +2,7 @@
 .services-section{
     @extend %section-padding;
     &__list{
-        @include flex(space-between);
+        @include grids-list(30px);
         margin-top: 50px;
     }
     display: none;
@@ -10,6 +10,7 @@
         display: block;
     }
     &__item{
+        @include grids-item(3, 30px);
         position: relative;
         @include text-style(700, 14px, 1.14, center, 0.03em, $services-overlay-text-color);
         text-transform: uppercase;

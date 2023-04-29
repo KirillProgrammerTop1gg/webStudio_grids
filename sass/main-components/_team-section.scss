@@ -9,23 +9,9 @@
     }
 }
 .workers{
-    @include flex(space-between);
-    @media screen and (min-width: 320px) {
-        flex-wrap: wrap;
-        min-width: 100%;
-        max-width: 480px;
-        margin: 0 auto;
-        margin-top: 30px;
-    }
-    @media screen and (min-width: 480px) {
-        @include size-of-box(450px, auto);
-    }
-    @media screen and (min-width: 768px) {
-        @include size-of-box(738px, auto);
-    }
+    @include grids-list(30px);
+    margin-top: 30px;
     @media screen and (min-width: 1200px){
-        flex-wrap: nowrap;
-        @include size-of-box(auto, auto);
         margin-top: 50px;
     }
     &__worker{
@@ -33,30 +19,12 @@
         box-shadow: $worker-boxshadow1, $worker-boxshadow2, $worker-boxshadow3;
         border-radius: 0px 0px 4px 4px;
         padding-bottom: 30px;
-        @media screen and (min-width: 320px) {
-            min-width: 100%;
-            max-width: 480px;
-            &:nth-child(n+2){
-                margin-top: 30px;
-            }
-        }
-        @media screen and (min-width: 480px) {
-            @include size-of-box(450px, auto);
-        }
+        @include grids-item(1, 30px);
         @media screen and (min-width: 768px) {
-            @include size-of-box(354px, auto);
-            &:nth-child(n){
-                margin-top: 0;
-            }
-            &:nth-child(n+3){
-                margin-top: 30px;
-            }
+            @include grids-item(2, 30px);
         }
         @media screen and (min-width: 1200px){
-            &:nth-child(n){
-                margin-top: 0;
-            }
-            @include size-of-box(270px, auto);
+            @include grids-item(4, 30px);
         }
     }
     &__name{

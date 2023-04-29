@@ -8,23 +8,8 @@
         padding-top: 94px;
     }
     &__list{
-        @media screen and (min-width: 320px) {
-            @include flex(space-between);
-            flex-wrap: wrap;
-            margin: 0 auto;
-            min-width: 100%;
-            max-width: 480px;
-        }
-        @media screen and (min-width: 480px) {
-            @include size-of-box(450px, auto);
-        }
-        @media screen and (min-width: 768px) {
-            @include size-of-box(738px, auto);
-        }
-        @media screen and (min-width: 1200px){
-            flex-wrap: nowrap;
-            @include size-of-box(auto, auto);
-        }
+        @include grids-list(30px);
+        width: 100%;
     }
     &__item:before{
         @media screen and (min-width: 320px) {
@@ -63,23 +48,12 @@
         &:nth-child(4)::before{
             background-image: url('../imgs/imgDecorative/icon4.png');
         }
-        @media screen and (min-width: 320px) {
-            &:nth-child(n+2){
-                margin-top: 30px;
-            }
-        }
+        @include grids-item(1, 30px);
         @media screen and (min-width: 768px) {
-            &:nth-child(n){
-                margin-top: 0;
-            }
-            &:nth-child(n+3){
-                margin-top: 37px;
-            }
+            @include grids-item(2, 30px);
         }
         @media screen and (min-width: 1200px){
-            &:nth-child(n){
-                margin-top: 0;
-            }
+            @include grids-item(4 ,30px);
         }
     }
     &__title{
