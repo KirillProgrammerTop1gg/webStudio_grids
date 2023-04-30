@@ -29,23 +29,17 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 100%;
+  min-width: 100%;
   padding: 0 15px;
-}
-@media screen and (min-width: 480px) {
-  .container {
-    max-width: 450px;
-    padding: 0;
-  }
 }
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 738px;
+    min-width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
-    max-width: 1170px;
+    min-width: 1200px;
   }
 }
 
@@ -370,6 +364,7 @@ img {
   width: 100%;
 }
 .benefits-section__item:before {
+  height: 120px;
   content: "";
   display: block;
   margin-bottom: 30px;
@@ -377,37 +372,6 @@ img {
   background-size: 70px 70px;
   background-repeat: no-repeat;
   background-position: center center;
-}
-@media screen and (min-width: 320px) {
-  .benefits-section__item:before {
-    height: 120px;
-    min-width: 100%;
-    max-width: 480px;
-  }
-}
-@media screen and (min-width: 480px) {
-  .benefits-section__item:before {
-    min-width: auto;
-    max-width: none;
-    width: 450px;
-    height: 120px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .benefits-section__item:before {
-    min-width: auto;
-    max-width: none;
-    width: 354px;
-    height: 120px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .benefits-section__item:before {
-    min-width: auto;
-    max-width: none;
-    width: 270px;
-    height: 120px;
-  }
 }
 .benefits-section__item {
   flex-basis: calc((100% - 30px) / 1);
@@ -442,30 +406,11 @@ img {
   letter-spacing: 0.03em;
   color: #212121;
   font-family: "Roboto";
+  text-align: center;
   text-transform: uppercase;
-}
-@media screen and (min-width: 320px) {
-  .benefits-section__title {
-    text-align: center;
-    min-width: 100%;
-    max-width: 480px;
-  }
-}
-@media screen and (min-width: 480px) {
-  .benefits-section__title {
-    min-width: auto;
-    max-width: none;
-    width: 450px;
-    height: auto;
-    text-align: center;
-  }
 }
 @media screen and (min-width: 768px) {
   .benefits-section__title {
-    min-width: auto;
-    max-width: none;
-    width: 270px;
-    height: auto;
     text-align: start;
   }
 }
@@ -478,30 +423,6 @@ img {
   color: #757575;
   font-family: "Roboto";
   margin-top: 10px;
-}
-@media screen and (min-width: 320px) {
-  .benefits-section__text {
-    min-width: 100%;
-    max-width: 480px;
-    padding-left: 15px;
-  }
-}
-@media screen and (min-width: 480px) {
-  .benefits-section__text {
-    min-width: auto;
-    max-width: none;
-    width: 450px;
-    height: auto;
-    padding-left: 0;
-  }
-}
-@media screen and (min-width: 768px) {
-  .benefits-section__text {
-    min-width: auto;
-    max-width: none;
-    width: 270px;
-    height: auto;
-  }
 }
 
 /* section services */
